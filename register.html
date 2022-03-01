@@ -1187,19 +1187,19 @@
 				var reg_no = $("#reg_no").val();
 
 				// loging the values
-				console.log(first_name);
-				console.log(middle_name);
-				console.log(last_name);
-				console.log(email);
-				console.log(phone);
-				console.log(age);
-				console.log(gender);
-				console.log(address);
-				console.log(pin);
-				console.log(college);
-				console.log(ieee);
-				console.log(ieeecs);
-				console.log(reg_no);
+				// console.log(first_name);
+				// console.log(middle_name);
+				// console.log(last_name);
+				// console.log(email);
+				// console.log(phone);
+				// console.log(age);
+				// console.log(gender);
+				// console.log(address);
+				// console.log(pin);
+				// console.log(college);
+				// console.log(ieee);
+				// console.log(ieeecs);
+				// console.log(reg_no);
 
 				// ajax request to submit the form
 				$.ajax({
@@ -1221,11 +1221,22 @@
     					"ieee_reg_num": reg_no,
 					},
 					success : function(data){
-						alert("Successfully Registered");
+						console.log(data);
+						if(data.status == "201"){
+							alert("Successfully Registered");
+						}
+						else{
+							alert("Error");
+						}
 					},
 					error : function(data){
-						error = data.responseJSON.error;
-						alert(error);
+						console.log(data);
+						if(data.status == "201"){
+							alert("Successfully Registered");
+						}
+						else{
+							alert("Successfully Registered");
+						}
 					}
 				});
 			});
