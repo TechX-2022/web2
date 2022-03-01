@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
     <!--Personalised Styles-->
@@ -1186,6 +1186,19 @@
 				var ieeecs = $("#ieeecs").val();
 				var reg_no = $("#reg_no").val();
 
+				// checking if email is valid
+				var email_regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+				if(!email_regex.test(email) && email != ""){
+					//alert("Please enter a valid email");
+					Swal.fire({
+  					title: 'Email is not valid',
+  					text: 'Please enter a valid email',
+  					icon: 'error',
+  					confirmButtonText: 'Cool'
+					})
+					return false;
+				}
+
 				// loging the values
 				// console.log(first_name);
 				// console.log(middle_name);
@@ -1202,43 +1215,71 @@
 				// console.log(reg_no);
 
 				// ajax request to submit the form
-				$.ajax({
-					url : "https://techx-2022-feb.herokuapp.com/api/register/",
-					type : "POST",
-					data : {
-						"first_name": first_name,
-    					"middle_name": middle_name,	
-    					"last_name": last_name,
-    					"email": email,
-    					"phone": phone,
-    					"age": age,
-    					"gender": gender,
-    					"college": college,
-    					"address": address,
-    					"pincode": pin,
-    					"ieee_member": ieee,
-    					"ieee_cs_member": ieeecs,
-    					"ieee_reg_num": reg_no,
-					},
-					success : function(data){
-						//console.log(data);
-						if(data.status == "201"){
-							alert("Successfully Registered");
+				// checking it is not empty
+				if(first_name != "" && email != "" && phone != "" && age != "" && gender!="" && address!="" && pin!="" && college!=""){
+						$.ajax({
+						url : "https://techx-2022-feb.herokuapp.com/api/register/",
+						type : "POST",
+						data : {
+							"first_name": first_name,
+							"middle_name": middle_name,	
+							"last_name": last_name,
+							"email": email,
+							"phone": phone,
+							"age": age,
+							"gender": gender,
+							"college": college,
+							"address": address,
+							"pincode": pin,
+							"ieee_member": ieee,
+							"ieee_cs_member": ieeecs,
+							"ieee_reg_num": reg_no,
+						},
+						success : function(data){
+							//console.log(data);
+							if(data.status == "201"){
+								//alert("Successfully Registered");
+								Swal.fire({
+  								title: 'Successfully Registered',
+  								text: 'You will be contacted by our team soon',
+  								icon: 'success',
+  								confirmButtonText: 'Cool'
+								})
+							}
+							else{
+								alert("Error");
+							}
+						},
+						error : function(data){
+							//console.log(data);
+							if(data.status == "201"){
+								Swal.fire({
+  								title: 'Successfully Registered',
+  								text: 'You will be contacted by our team soon',
+  								icon: 'success',
+  								confirmButtonText: 'Cool'
+								})
+							}
+							else{
+								Swal.fire({
+  								title: 'Successfully Registered',
+  								text: 'You will be contacted by our team soon',
+  								icon: 'success',
+  								confirmButtonText: 'Cool'
+								})
+							}
 						}
-						else{
-							alert("Error");
-						}
-					},
-					error : function(data){
-						//console.log(data);
-						if(data.status == "201"){
-							alert("Successfully Registered");
-						}
-						else{
-							alert("Successfully Registered");
-						}
-					}
-				});
+					});
+				}
+				else{
+					Swal.fire({
+  					title: 'Form is not Valid',
+  					text: 'Please all the required fields',
+  					icon: 'error',
+  					confirmButtonText: 'Cool'
+					})
+				}
+				
 			});
 		});
    
