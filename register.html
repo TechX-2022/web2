@@ -736,6 +736,8 @@
 						<form>
 							<br>
 							<div class="form-row">
+                                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 								<div class="col-md-4">
 							  		<label for="first_name" style="margin-bottom: 10px;">First Name*</label>
 							  		<input type="text" class="form-control" id="first_name" placeholder="Enter First Name" style="margin-bottom: 10px;" required>
@@ -817,6 +819,11 @@
 								</div>
 							</div>
 							<br>
+                            <div class="row">
+                                
+                                    <div class="g-recaptcha"  data-sitekey="6LfEH6oeAAAAAD6QoEVBCudz-wx-tc5O4suk43yE"></div>
+                            
+                            </div>
 							<div class="row" style="justify-content: center;">
 								<button type="button" class="btn btn-primary" id="submit" style="font-size: 1.5rem; margin-top: 10px; padding: 5px 25px; border-color: #fc6f26; background-color: #fc6f26;">Register for TechX</button>
 							</div>
@@ -1168,6 +1175,28 @@
                     activeSlide.removeClass('theactive').prev('.itemslide').addClass('theactive');
                 }
             });
+
+            // captcha validation
+            // function captchaCallback(response){
+            //     if(response != ''){
+            //         $.post('/accounts/check-recaptcha/', {recaptcha: $("#g-recaptcha-response").val()}).done(function (data) {
+            //         data_json = JSON.stringify(data);
+            //         data_json_parsed = JSON.parse(data_json);
+            //         var response_value = data_json_parsed.response;
+            //         if (response_value == 'success') {
+            //             $('#recaptcha').css('visibility','hidden');
+            //             $('#recaptcha').css('opacity','0');
+            //             $("#recaptcha").removeClass("d-block");
+            //             //$("#recaptcha").removeClass("d-block");
+            //             //grecaptcha.reset();
+            //             //makeGenerateOTPRequest();
+            //         } else {
+            //             // console.log('reCAPTCHA failed!');
+            //             grecaptcha.reset();
+            //         }
+            //     });
+            //     }
+            // }
 
 
 			// sending post request to server to submit the form
