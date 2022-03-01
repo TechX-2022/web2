@@ -559,7 +559,7 @@
                                             <li><a href="coming-soon.html">Coming Soon</a></li>
                                         </ul>-->
                                         </li>
-                                        <li class="dropdown"><a href="covid.html">Covid Protocols</a>
+                                        <li class="current dropdown"><a href="#about">Covid Protocols</a>
                                         </li>
                                         <!--                                     <li class="dropdown has-mega-menu"><a href="#">Pages</a>
                                         <div class="mega-menu">
@@ -603,13 +603,14 @@
                                         </div> -->
                                         <!-- </li> -->
 
+                                        <li><a href="register.html">Register</a></li>
+
                                         <!-- <li class="dropdown"><a href="#">Blog</a>
                                         <ul>
                                             <li><a href="blog.html">Blog</a></li>
                                             <li><a href="blog-single.html">Blog Single</a></li>
                                         </ul>
                                     </li> -->
-										<li class="current"><a href="#">Register</a></li>
                                         <li><a href="#footer">Contact</a></li>
                                     </ul>
                                 </div>
@@ -710,11 +711,11 @@
         <!--Page Title-->
         <section class="page-title" style="background-image:url(images/background/2.png);">
             <div class="auto-container">
-                <span class="float-text">Register</span>
-                <h1>Register</h1>
+                <span class="float-text">Covid Protocols</span>
+                <h1>Covid Protocols</h1>
                 <ul class="bread-crumb clearfix">
                     <li><a href="index.html">Home </a></li>
-                    <li>Register</li>
+                    <li>Covid Protocols</li>
                 </ul>
             </div>
         </section>
@@ -725,103 +726,39 @@
             <br>
             <br>
             <br>
-            <div class="row" style="padding: 20px; justify-content: center;">
-                <div class="col-md-6">
+            <div class="row" style="padding: 20px;">
+                <div class="col-md-12">
                     <div class="covid-title" style="text-align:center;">
-                        <!-- <h1 style="color:#fc6f26">Register</h1> -->
+                        <h1 style="color:#fc6f26">COVID-19 Protocols</h1>
                         <br>
                         <br>
                     </div>
-                    <div class="card" style="border-color:#fc6f26; border-radius:10px; border-width: 3px;font-size: 1.5rem; padding: 20px 25px; margin-left: 10px; margin-right: 10px;">
-						<form action="https://techx-2022-feb.herokuapp.com/api/register/" method="post">
-							<br>
-							<div class="form-row">
-								<div class="col-md-4">
-							  		<label for="first_name" style="margin-bottom: 10px;">First Name*</label>
-							  		<input type="text" class="form-control" id="first_name" placeholder="Enter First Name" name="first_name" style="margin-bottom: 10px;" required>
-								</div>
-								<div class="col-md-4">
-									<label for="middle_name" style="margin-bottom: 10px;">Middle Name</label>
-									<input type="text" class="form-control" id="middle_name" placeholder="Enter Middle Name" name="middle_name" style="margin-bottom: 10px;">
-								</div>
-								<div class="col-md-4">
-									<label for="last_name" style="margin-bottom: 10px;">Last Name</label>
-									<input type="text" class="form-control" id="last_name" placeholder="Enter Last Name" name="last_name" style="margin-bottom: 10px;">
-								</div>
-							</div>
-							<br>
-							<div class="form-row">
-								<div class="col-md-6">
-							  		<label for="email" style="margin-bottom: 10px;">Email*</label>
-							  		<input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" style="margin-bottom: 10px;" required>
-								</div>
-								<div class="col-md-6">
-									<label for="phone" style="margin-bottom: 10px;">Phone Number*</label>
-									<input type="tel" class="form-control" id="middle_name" placeholder="Enter Phone Number" maxlength="10" name="phone" style="margin-bottom: 10px;">
-								</div>
-							</div>
-							<br>
-							<div class="form-row">
-								<div class="col-md-6">
-							  		<label for="age" style="margin-bottom: 10px;">Age*</label>
-							  		<input type="text" class="form-control" id="age" placeholder="Enter Age" name="age" style="margin-bottom: 10px;" required>
-								</div>
-								<div class="col-md-6">
-									<label for="gender" style="margin-bottom: 10px;">Gender*</label>
-									<select class="form-control form-select" name="gender" required>
-										<option selected value="">Select Gender</option>
-										<option value="M">Male</option>
-										<option value="F">Female</option>
-										<option value="O">Rather Not Say</option>
-									  </select>
-								</div>
-							</div>
-							<br>
-							<div class="form-row">
-								<div class="col-md-6">
-							  		<label for="address" style="margin-bottom: 10px;">Address*</label>
-							  		<input type="text" class="form-control" id="address" placeholder="Enter Address" name="address" style="margin-bottom: 10px;" required>
-								</div>
-								<div class="col-md-6">
-									<label for="pin" style="margin-bottom: 10px;">Pin Code*</label>
-									<input type="text" class="form-control" id="pin" placeholder="Enter Pin Code" maxlength="9" name="pincode" style="margin-bottom: 10px;" required>
-								</div>
-							</div>
-							<br>
-							<div class="form-row">
-								<div class="col-md-12">
-							  		<label for="college" style="margin-bottom: 10px;">College*</label>
-							  		<input type="text" class="form-control" id="college" placeholder="Enter College Name" name="college" style="margin-bottom: 10px;" required>
-								</div>
-							</div>
-							<br>
-							<div class="form-row">
-								<div class="col-md-6">
-									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="True" name="ieee_member" >
-										<label class="form-check-label" for="inlineCheckbox1" >Are you IEEE member?</label>
-									  </div>
-								</div>
-								<div class="col-md-6">
-									  <div class="form-check form-check-inline">
-										<input class="form-check-input" type="checkbox" id="inlineCheckbox2"value="True" name="ieee_cs_member">
-										<label class="form-check-label" for="inlineCheckbox2" >Are you IEEE CS member?</label>
-									  </div>
-								</div>
-							</div>
-							<br>
-							<div class="form-row">
-								<div class="col-md-12">
-							  		<label for="reg_no" style="margin-bottom: 10px;">IEEE Registration Number</label>
-							  		<input type="text" class="form-control" id="reg_no" placeholder="Leave Blank If you are not a member" style="margin-bottom: 10px;" name="ieee_reg_num">
-								</div>
-							</div>
-							<br>
-							<div class="row" style="justify-content: center;">
-								<button type="submit" class="btn btn-primary" style="font-size: 1.5rem; margin-top: 10px; padding: 5px 25px; border-color: #fc6f26; background-color: #fc6f26;">Register for TechX</button>
-							</div>
-							<br>
-						  </form>
+                    <div class="card" style="font-size: 1.5rem; padding: 20px; margin-left: 10px; margin-right: 10px;">
+
+                        <h3>The safety and good health of all attendees is of our prime concern. Keeping the current
+                            COVID scenario in mind, we shall follow the COVID protocols mentioned herein.</h3>
+                        <br>
+                        <hr>
+                        <br>
+                            <p>
+                            1) volunteers will ensure that all attendees conform to the TechX Congress COVID-19
+                            Protocol Form. <br><br>
+                            2) Vaccination certificates for both doses will be mandatory for all the attendees.
+                            Discourage attendees and staff from greeting others with physical contact (for example,
+                            handshakes).<br><br>
+                            3) Encourage attendees ahead of the event to bring and use masks at the event.
+                            Require staff and attendees to wash their hands frequently (for example, before, during, and
+                            after taking tickets, or after touching garbage) with soap and water for at least 20 seconds
+                            and increase monitoring to ensure adherence. <br><br>
+                            4) Ensure that we have adequate supplies to support healthy hygiene Supplies include soap,
+                            water, hand sanitizer containing at least 60% alcohol, a way to dry hands (e.g., paper
+                            towels, hand dryer), tissues, disinfectant wipes, masks (as feasible), and no-touch trash
+                            cans. <br><br>
+                            5) Post signs in highly visible locations (for example, at entrances, in restrooms) that
+                            promote everyday protective measures and describe how to stop the spread of germs by
+                            properly wearing a mask, physical distancing, and washing hands. <br><br>
+                            6) Proper sanitation facilities at the resort shall be ensured by the volunteers. <br><br>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -1031,10 +968,6 @@
                 }
             })
         })
-
-		
-
-
     </script>
 
 
