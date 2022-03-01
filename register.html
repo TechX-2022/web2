@@ -800,13 +800,13 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="checkbox" id="ieee" value="True" >
+										<input class="form-check-label" type="checkbox" id="ieee" value="True" >
 										<label class="form-check-label" for="ieee" >Are you IEEE member?</label>
 									  </div>
 								</div>
 								<div class="col-md-6">
 									  <div class="form-check form-check-inline">
-										<input class="form-check-input" type="checkbox" id="ieeecs"value="True" >
+										<input class="form-check-label" type="checkbox" id="ieeecs"value="True" >
 										<label class="form-check-label" for="ieeecs" >Are you IEEE CS member?</label>
 									  </div>
 								</div>
@@ -815,7 +815,8 @@
 							<div class="form-row">
 								<div class="col-md-12">
 							  		<label for="reg_no" style="margin-bottom: 10px;">IEEE Registration Number</label>
-							  		<input type="text" class="form-control" id="reg_no" placeholder="Leave Blank If you are not a member" style="margin-bottom: 10px;" name="ieee_reg_num">
+							  	    <input type="text" class="form-control" id="reg_no" placeholder="Leave Blank If you are not a member" style="margin-bottom: 10px;" name="ieee_reg_num">
+                                    <span style="font-size: 15px;">You will only be eligible for IEEE discounts if you provide a Valid Registration Number</span>
 								</div>
 							</div>
 							<br>
@@ -1132,7 +1133,7 @@
             var slides = $('.itemslide');
 
             slides.first().before(slides.last());
-
+            
 
             setInterval(function () {
 
@@ -1228,16 +1229,19 @@
 					return false;
 				}
                 // if ieee is selected then enter reg no
-                if(ieee == "True" && first_name != "" && email != "" && phone != "" && age != "" && gender!="" && address!="" && pin!="" && college!=""){
-                    if(reg_no == ""){
-                        Swal.fire({title: 'IEEE Registration Number is required',
-  					text: 'Enter your IEEE Registration Number',
-  					icon: 'error',
-  					confirmButtonText: 'OK'
-					})
-					return false;
-                    }
-                }
+                // if(ieee == "True"){
+                //     if(reg_no == ""){
+                //         Swal.fire({title: 'IEEE Registration Number is required',
+  				// 	text: 'Enter your IEEE Registration Number',
+  				// 	icon: 'error',
+  				// 	confirmButtonText: 'OK'
+				// 	})
+                //    // resetting $("#ieee").val(); to empty
+                //      $("#ieee").val("False");
+                    
+				// 	return false;
+                //     }
+                // }
 
 
 				// loging the values
