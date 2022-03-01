@@ -1227,6 +1227,18 @@
 					})
 					return false;
 				}
+                // if ieee is selected then enter reg no
+                if(ieee == "True" && first_name != "" && email != "" && phone != "" && age != "" && gender!="" && address!="" && pin!="" && college!=""){
+                    if(reg_no == ""){
+                        Swal.fire({title: 'IEEE Registration Number is required',
+  					text: 'Enter your IEEE Registration Number',
+  					icon: 'error',
+  					confirmButtonText: 'Cool'
+					})
+					return false;
+                    }
+                }
+
 
 				// loging the values
 				// console.log(first_name);
