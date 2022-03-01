@@ -797,19 +797,25 @@
 								</div>
 							</div>
 							<br>
-							<div class="form-row">
+							<div class="form-row">				
+								
 								<div class="col-md-6">
-									<div class="form-check form-check-inline">
-										<input class="form-check-label" type="checkbox" id="ieee" value="True" >
-										<label class="form-check-label" for="ieee" >Are you IEEE member?</label>
-									  </div>
+									<label for="ieee" style="margin-bottom: 10px;">IEEE Member*</label>
+									<select class="form-control form-select"  id="ieee" required>
+										<option selected value="False">NO</option>
+										<option value="True">YES</option>
+									  </select>
 								</div>
+								
 								<div class="col-md-6">
-									  <div class="form-check form-check-inline">
-										<input class="form-check-label" type="checkbox" id="ieeecs"value="True" >
-										<label class="form-check-label" for="ieeecs" >Are you IEEE CS member?</label>
-									  </div>
+									<label for="ieeecs" style="margin-bottom: 10px;">IEEE CS Member*</label>
+									<select class="form-control form-select"  id="ieeecs" required>
+										<option selected value="False">NO</option>
+										<option value="True">YES</option>
+									  </select>
 								</div>
+								
+								
 							</div>
 							<br>
 							<div class="form-row">
