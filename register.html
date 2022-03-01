@@ -1235,19 +1235,19 @@
 					return false;
 				}
                 // if ieee is selected then enter reg no
-                // if(ieee == "True"){
-                //     if(reg_no == ""){
-                //         Swal.fire({title: 'IEEE Registration Number is required',
-  				// 	text: 'Enter your IEEE Registration Number',
-  				// 	icon: 'error',
-  				// 	confirmButtonText: 'OK'
-				// 	})
-                //    // resetting $("#ieee").val(); to empty
-                //      $("#ieee").val("False");
+                if(ieee == "True"){
+                    if(reg_no == ""){
+                        Swal.fire({title: 'IEEE Registration Number is required',
+  					text: 'Enter your IEEE Registration Number',
+  					icon: 'error',
+  					confirmButtonText: 'OK'
+					})
+                   // resetting $("#ieee").val(); to empty
+                     $("#ieee").val("False");
                     
-				// 	return false;
-                //     }
-                // }
+					return false;
+                    }
+                }
 
 
 				// loging the values
