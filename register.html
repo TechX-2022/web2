@@ -813,10 +813,20 @@
 										<option selected value="False">NO</option>
 										<option value="True">YES</option>
 									  </select>
-								</div>
-								
-								
+								</div>	
+
 							</div>
+                            <br>
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <label for="ieeecs" style="margin-bottom: 10px;">Mode*</label>
+                                    <select class="form-control form-select"  id="online" required>
+                                        <option selected value="False">Non Virtual</option>
+                                        <option value="True">Virtual</option>
+                                      </select>
+                                </div>
+                            </div>
+                            
 							<br>
 							<div class="form-row">
 								<div class="col-md-12">
@@ -1221,6 +1231,7 @@
 				var ieee = $("#ieee").val();
 				var ieeecs = $("#ieeecs").val();
 				var reg_no = $("#reg_no").val();
+                var online=$("#online").val();
 
 				// checking if email is valid
 				var email_regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -1285,6 +1296,7 @@
 							"ieee_member": ieee,
 							"ieee_cs_member": ieeecs,
 							"ieee_reg_num": reg_no,
+                            "online":online
 						},
 						success : function(data){
 							//console.log(data);
