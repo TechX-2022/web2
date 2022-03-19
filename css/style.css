@@ -3873,7 +3873,7 @@ img{
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-color:rgba(75,30,206,.95);
+	background-color:rgb(225, 116, 14, 0.95);
 	opacity: 0;
 	visibility: hidden;
 	text-align: left;
